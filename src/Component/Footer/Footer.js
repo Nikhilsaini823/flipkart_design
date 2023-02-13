@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -7,32 +8,32 @@ function Footer() {
         <div className="col-6 col-md-2 mb-3">
             <h5>Section</h5>
             <ul className="nav flex-column">
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
+            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Home</Link></li>
+            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Features</Link></li>
+            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Pricing</Link></li>
+            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">FAQs</Link></li>
+            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">About</Link></li>
             </ul>
         </div>
         <div className="col-6 col-md-2 mb-3">
             <h5>Section</h5>
             <ul className="nav flex-column">
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
+            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Home</Link></li>
+            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Features</Link></li>
+            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Pricing</Link></li>
+            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">FAQs</Link></li>
+            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">About</Link></li>
             </ul>
         </div>
 
         <div className="col-6 col-md-2 mb-3">
             <h5>Section</h5>
             <ul className="nav flex-column">
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
+            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Home</Link></li>
+            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Features</Link></li>
+            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">Pricing</Link></li>
+            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">FAQs</Link></li>
+            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-muted">About</Link></li>
             </ul>
         </div>
 
@@ -52,9 +53,9 @@ function Footer() {
         <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
         <p style={{color: 'white'}}>&copy; 2022 Company, Inc. All rights reserved.</p>
         <ul className="list-unstyled d-flex">
-            <li className="ms-3"><a className="link-dark" href="#"><svg className="bi" width="24" height="24"><use xlinkHref="#twitter"/></svg></a></li>
-            <li className="ms-3"><a className="link-dark" href="#"><svg className="bi" width="24" height="24"><use xlinkHref="#instagram"/></svg></a></li>
-            <li className="ms-3"><a className="link-dark" href="#"><svg className="bi" width="24" height="24"><use xlinkHref="#facebook"/></svg></a></li>
+            <li className="ms-3"><Link className="link-dark" to="#"><svg className="bi" width="24" height="24"><use xlinkHref="#twitter"/></svg></Link></li>
+            <li className="ms-3"><Link className="link-dark" to="#"><svg className="bi" width="24" height="24"><use xlinkHref="#instagram"/></svg></Link></li>
+            <li className="ms-3"><Link className="link-dark" to="#"><svg className="bi" width="24" height="24"><use xlinkHref="#facebook"/></svg></Link></li>
         </ul>
         </div>
     </footer>
