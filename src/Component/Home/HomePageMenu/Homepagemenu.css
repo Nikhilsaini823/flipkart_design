@@ -1,0 +1,42 @@
+.item{
+    margin: 12px 0px 1px 55px;
+    cursor: pointer;
+    color: #2874f0;
+}
+
+.itemimg{
+    cursor: pointer;
+    margin: 0px 0px 0px 5px;
+    height: 55px;
+    margin-right: -7px;
+
+    
+}
+.itemLink{
+    font-weight: 500;
+    font-size: 13px;
+    text-align: center;
+    margin: -6px 0px 0px -1px;
+    display: block;
+    padding: 0.5rem 0rem;
+    color: black;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    transition: all 0.5s ease;    
+}
+
+.home-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 15px;
+    margin-bottom: 0;
+    list-style: none;
+    height: 115px;
+}
+.item:hover .submenu{
+    display: block !important;
+}
+
+.itemLink:hover{
+    transform: rotate(180deg);
+}

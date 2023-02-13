@@ -1,0 +1,98 @@
+.navbar {
+    background-color: #2874f0;
+    height: 56px; 
+    /* flex-wrap: nowrap;   */
+}
+.navbar-brand{
+    
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.serachbox {
+    display: block;
+    margin-left: 50px;
+    width: 40%;
+    padding: 0.395rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 0.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+}
+.loginbtn {
+    color: #2874f0;
+    font-weight: 500;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    height: 31px;
+    padding: 4px 40px;
+    border: 1px solid #dbdbdb;
+    justify-content: initial
+}
+.navbar>.container{
+    justify-content: start;
+}
+.sellerLink{
+    line-height: 20px;
+    font-size: 15px;
+    letter-spacing: .1px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 230px;
+    box-shadow: 0px 8px 16px 5px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin: 3px -30px 0px;
+}
+
+.menu:hover .submenu{
+    display: block !important;
+}
+
+.Loginmenu{
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.morelink{
+    line-height: 20px;
+    font-size: 15px;
+    letter-spacing: .1px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    
+}
+.cartlink{
+    align-items: center;
+    line-height: 20px;
+    font-size: 15px;
+    letter-spacing: .1px;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+    margin: 0px 7px 0px 10px;
+    text-decoration: none;
+}
+.morelink svg:hover{
+    transform: rotate(180deg);
+}
