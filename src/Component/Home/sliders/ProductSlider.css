@@ -37,9 +37,7 @@
   }
   
   .product-container {
-    height: 367px;
     display: flex;
-    /* overflow: auto; */
     scroll-behavior: smooth;
     /* height: calc(100vh - 100%); */
     overflow:scroll; 

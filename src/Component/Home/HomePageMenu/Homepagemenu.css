@@ -37,6 +37,6 @@
     display: block !important;
 }
 
-.itemLink:hover{
+.itemLink svg:hover{
     transform: rotate(180deg);
 }

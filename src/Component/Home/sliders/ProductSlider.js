@@ -14,37 +14,37 @@ function ProductSlider() {
     },
     {
       'product_name': 'Brand shoes 2',
-      'price': '20$',
+      'price': '50$',
       'description': "a short line about the Brand shoes 2 and much morte detail about Brand shoes 2.",
       "image":'images/card2.jpg'
     },
     {
       'product_name': 'Brand shoes 3',
-      'price': '20$',
+      'price': '10$',
       'description': "a short line about the Brand shoes 3 and much morte detail about Brand shoes 3.",
       "image":'images/card3.jpg'
     },
     {
       'product_name': 'Brand shoes 4',
-      'price': '20$',
+      'price': '30$',
       'description': "a short line about the Brand shoes 4 and much morte detail about Brand shoes 4.",
       "image":'images/card4.jpg'
     },
     {
       'product_name': 'Brand shoes 5',
-      'price': '20$',
+      'price': '40$',
       'description': "a short line about the Brand shoes 5 and much morte detail about Brand shoes 5.",
       "image":'images/card5.jpg'
     },
     {
       'product_name': 'Brand shoes 6',
-      'price': '20$',
+      'price': '60$',
       'description': "a short line about the Brand shoes 6 and much morte detail about Brand shoes 6.",
       "image":'images/card6.jpg'
     },
     {
       'product_name': 'Brand shoes 7',
-      'price': '20$',
+      'price': '10$',
       'description': "a short line about the Brand shoes 7 and much morte detail about Brand shoes 7.",
       "image":'images/card7.jpg'
     },
@@ -77,8 +77,8 @@ function ProductSlider() {
           <div className="product-container">
           {data.map((product,index)=>(
             <div key={index} className="product-card">
-              <div className="product-image">
-                <img src={product.image} height="20" width='20' className="product-thumb" alt="" />
+              <div className="product-image" role="img" aria-label="place alt text here" title={product.price +" Shope Now"}>
+                <img src={product.image} height="20" width='20' className="product-thumb" alt="...."  />
               </div>
               <div className="product-info">
                 <h2 className="product-brand">{product.product_name}</h2>

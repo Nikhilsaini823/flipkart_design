@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import ProductList from '../../../container/ProductList'
 import Sliders from '../sliders/Sliders'
 import './Homepagemenu.css'
 
@@ -10,7 +11,8 @@ function Homepagemenu() {
         <ul className='home-menu'>
           <li className='item'><img className='itemimg' src='/images/grocery.jpg' alt="..." /><Link to="#" className=" itemLink">Grocery</Link></li>
           <li className='item'><img className='itemimg' src='/images/mobile.jpg' alt="..." /><Link to="#" className="itemLink">Mobiles</Link></li>
-          <li className='item'><img className='itemimg' src='/images/fashion.jpg' alt="..." />
+          <li className='item'>
+            <img className='itemimg' src='/images/fashion.jpg' alt="..." />
             <Link to="#" className="itemLink">Fashion 
               <svg xmlns="http://www.w3.org/2000/svg"  width="10" height="10" fill="currentColor" className="bi bi-chevron-up mx-2 "   viewBox="0 0 16 16">
                 <path fillRule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
@@ -84,6 +86,7 @@ function Homepagemenu() {
         </ul>
       </div>
       <Sliders />
+      <ProductList/>
     </>
   )
 }
