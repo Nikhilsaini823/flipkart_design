@@ -19,7 +19,7 @@ const ProductList = () => {
     useEffect(() => {
         fatchProduct();
     },[])
-    console.log('products: ', products)
+  
     return (
         <div className="album py-5 bg-light ">
             <div className="container">

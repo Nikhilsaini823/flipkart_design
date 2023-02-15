@@ -14,7 +14,7 @@
 
 .serachbox {
     display: block;
-    margin-left: 50px;
+    margin-left: -5px;
     width: 40%;
     padding: 0.395rem 0.75rem;
     font-size: 1rem;
