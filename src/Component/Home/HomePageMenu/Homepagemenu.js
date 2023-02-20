@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ProductList from '../../../container/ProductList'
+import ProductList from '../../container/productdata'
 import Sliders from '../sliders/Sliders'
 import './Homepagemenu.css'
 

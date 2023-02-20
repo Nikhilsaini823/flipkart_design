@@ -3,8 +3,8 @@
 } */
 
 img.imgheight{
-    min-height: 320px;
-    max-height: 320px;
+    min-height: 240px;
+    max-height: 240px;
 }
 .containerx {
     max-width: 250px;
@@ -12,3 +12,8 @@ img.imgheight{
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+.imgheight:hover {
+    -ms-transform: scale(1.1); 
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); 
+  }

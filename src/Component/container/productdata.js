@@ -1,33 +1,26 @@
 import React, { useEffect } from 'react'
-import axios from "axios"
-import { useDispatch, useSelector } from 'react-redux'
-import { setProducts } from '../redux/action/productAction';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import "./ProductList.css"
+import { productData } from '../../redux/action';
+import "./Productdata.css"
 
 const ProductList = () => {
-    const products = useSelector((state) => state.allproducts.products)
-    const dispatch = useDispatch();
-    const fatchProduct = async () => {
-        const response = await axios
-            .get("https://fakestoreapi.com/products/")
-            .catch((err) => {
-                console.log("err", err)
-            });
-        dispatch(setProducts(response.data))
-    };
+    const {isLoading, product} = useSelector(state => state.product)
+    const dispatch = useDispatch()
     useEffect(() => {
-        fatchProduct();
+       dispatch(productData(product))
     },[])
+    // console.log("Object.keys(product).length",Object.keys(product).length)
+    // console.log("product",product)
   
     return (
         <div className="album py-5 bg-light ">
             <div className="container">
                 <h1>Product List :)</h1>
-                {Object.keys(products).length === 0 ? (
+                {isLoading ? (
                     <div>Loarding.....</div>) : (
                     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-3">
-                        {products.map((data) => (
+                        {product.length > 0 && product.map((data) => (
                             <div className="col" key={data.id}>
                                 <div className="card shadow-sm">
                                     <img className="card-img-top imgheight" src={data.image} alt="Card image cap"  role="img" aria-label="place alt text here" title={data.price +" $ Shope Now"} />
@@ -36,7 +29,7 @@ const ProductList = () => {
                                         <p className="card-text containerx">{data.title}</p>
                                         <div className="d-flex justify-content-between align-items-center">
                                             <div className="btn-group">
-                                                <Link type="button" to={`/productdetails/${data.id}`} className="btn btn-primary btn-lg px-4 gap-3">Show Details</Link>
+                                            <Link type="button" to={`/productdetails/${data.id}`}  className="btn btn-primary btn-lg px-4 gap-3">Show Details</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -44,7 +37,7 @@ const ProductList = () => {
                             </div>
                         ))}
                     </div>
-                )}
+                 )} 
             </div>
         </div>
     )
