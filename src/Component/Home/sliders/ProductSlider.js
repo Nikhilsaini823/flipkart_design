@@ -48,8 +48,7 @@ function ProductSlider() {
       'description': "a short line about the Brand shoes 7 and much morte detail about Brand shoes 7.",
       "image":'images/card7.jpg'
     },
-  ]
-  console.log("data", data)
+  ];
 
   productContainers.forEach((item, i) => {
     let containerDimensions = item.getBoundingClientRect();
