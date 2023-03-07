@@ -6,21 +6,21 @@ import { addToCart } from "../../redux/reducer";
 
 function ProductDetail() {
  const { id } = useParams();
-  const dispatch = useDispatch();  
-  const {singleProduct, cartItem} = useSelector((state) => state.product );
+  const dispatch = useDispatch();
+  const {singleProduct} = useSelector((state) => state.product );
   const { image, title, description, price, category } = singleProduct
   
   useEffect(() => {
     dispatch(singlePoroduct(id));
   }, [dispatch, id]); 
-  console.log('cartItem',cartItem);
-  const add_to_cart = () => {
-    const finalArray = [...cartItem];
-    finalArray.push( {product: singleProduct,cartQty:1});
+  // console.log('cartItem',cartItem);
+  // const add_to_cart = () => {
+    // const finalArray = [...cartItem];
+    // finalArray.push({product: singleProduct});
+    // dispatch(addToCart(finalArray));
     // finalArray.cartQty = 1;
-    console.log('finalArray',finalArray);
-    dispatch(addToCart(finalArray));
-  }
+  //   console.log('finalArray',finalArray);
+  // }
 
   return (
     <>
@@ -31,7 +31,7 @@ function ProductDetail() {
             <div className="col col-lg-6 mt-5">
               <div className="container text-center">
                 {singleProduct.image &&
-                  <img src={image} style={{ height: '300px', width: '350px' }} />
+                  <img src={image} height= '300px' width= '350px' />
                 }
                 <h1>{title}</h1>
               </div>
@@ -54,9 +54,9 @@ function ProductDetail() {
             </div>
           </div>
         )}
-        <div style={{ marginLeft: "500px" }}>
-          <input id="form1" min="0" name="quantity" defaultValue="1" type="number" className="form-group col-md-1 mx-1" />
-          <button   onClick={() => add_to_cart()} className=" btn btn-primary" >ADD TO CART</button>
+        <div className="text-center">
+          <input type="number" name="number" defaultValue="3"  />
+          <button onClick={() => dispatch(addToCart({id, title, image, price }))} className=" btn btn-primary" >ADD TO CART</button>
         </div>
         
       </div>

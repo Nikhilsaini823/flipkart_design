@@ -1,25 +1,33 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
+import "./Cart.css"
+import { decrementQuantity, incrementQuantity, removeItem } from '../../redux/reducer'
 
 
 function Cart() {
     const cartItem = useSelector(state => state.product.cartItem)
-    console.log("cartpage",cartItem)
+    console.log("cartItem",cartItem)
+    const dispatch = useDispatch()
+    
   return (
     <>
-    <div className='container' >
+    <div className='container'>
         <h1>Shopping Cart :)</h1>
         {cartItem?.map((item, index)=>(
         <div className='row mt-3' key={index}>
             <div className='col'>
-                <img className='product-image' src={item.image} />
+                <img className='product_img' src={item.image}/>
             </div>
             <div className='col'>
-                <p>TITLE</p>
-                <h2>{item.producttitle}</h2>
-                <p>{item.price} </p>
-                <button  className="btn btn-danger">Remove</button>
-                <input id="form1" min="0" name="quantity" defaultValue="1" type="number" className="form-group col-md-1 ms-5 mx-1 " />
+                {/* <p>Product Id: <strong>{item.id}</strong> </p> */}
+                <p><strong>TITLE</strong></p>
+                <h2>{item.title}</h2>
+                <p>Price: <strong> {item.price} $</strong></p> <br></br>
+                <button  onClick={() => dispatch(removeItem(item.id))} className="btn btn-danger">Remove</button>
+                <button className='mx-1 mt-3' onClick={() => dispatch(decrementQuantity(item.id))}>-</button>
+                <span className='mx-3'>{item.quantity}</span>
+                <button className='mx-1' onClick={() => dispatch(incrementQuantity(item.id))}>+</button>
                 <button  className="btn btn-primary">Buy Now</button>
             </div>
         </div>
